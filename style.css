@@ -38,10 +38,15 @@ a:hover{
 /* header */
 
 header{
+    top: 0;
+    left: 0;
+    width: 100%;
     padding: 20px 0px;
     display: flex;
     align-items: center;
+    background-color: #fff;
     border-bottom: 1px solid lightgray;
+    position: fixed;
 }
 
 .first{
@@ -78,7 +83,7 @@ header{
 
 /* main */
 main{
-    margin: 50px 0 0 0;
+    margin: 180px 0 0 0;
 }
 
 main .faq{
