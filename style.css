@@ -1,0 +1,104 @@
+/* reset */
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* generals */
+html{
+    color: #262626;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container-large{
+    width: 100%;
+    padding: 0px 20px;
+}
+
+.container{
+    width: 1250px;
+    margin: 0 auto;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    color: rgb(58, 58, 255);
+}
+
+/* header */
+
+header{
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+}
+
+.first{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.first img{
+    width: 120px;
+}
+
+.first h3{
+    font-size: 18px;
+    color: gray;
+    font-weight: 500;
+}
+
+.second .menu{
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link{
+    font-size: 16px;
+    color: gray;
+    font-weight: 500;
+}
+
+.active{
+    color: rgb(58, 58, 255);
+}
+
+/* main */
+main{
+    margin: 50px 0 0 0;
+}
+
+main .faq{
+    margin-bottom: 40px;
+}
+
+main ol{
+    padding-left: 40px;
+}
+
+main li{
+    list-style: decimal;
+}
+
+main h2{
+    margin-bottom: 20px;
+}
+
+main p,
+main li{
+    margin-bottom: 15px;
+    line-height: 1.5em;
+}

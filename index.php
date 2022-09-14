@@ -1,19 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google FAQ</title>
-    <style>
-        .container{
-            width: 1200px;
-            margin: 0 auto
-        }
-    </style>
-</head>
-<body>
-
 <?php
 $faqs = [
     [
@@ -77,19 +61,62 @@ $faqs = [
 ]
 ?>
 
-<main>
-    <div class="container">
-        <?php
-            foreach($faqs as $faq){
-                echo '<h2>' . $faq['title'] . '</h2>';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google FAQ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Mine  -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-                $paragraph = $faq['paragraph'];
-                foreach($paragraph as $p){
-                    echo $p;
-                }
-            };
-        ?>
-    </div>
-</main>
+    <header>
+        <div class="container-large">
+            <div class="first">
+                <img src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg" alt="">
+                <h3>Privacy e Termini</h3>
+            </div>
+            <div class="second">
+                <nav class="">
+                    <ul class="menu">
+                        <li><a class="nav-link" href="">Introduzione</a></li>
+                        <li><a class="nav-link" href="">Norme sulla privacy</a></li>
+                        <li><a class="nav-link" href="">Termini di servizio</a></li>
+                        <li><a class="nav-link" href="">Tecnologie</a></li>
+                        <li><a class="active nav-link" href="">Domande frequenti</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>    
+
+    <main>
+        <div class="container">
+            
+                <?php
+                    foreach($faqs as $faq){
+                        echo '<div class="faq">';
+                        echo '<h2>' . $faq['title'] . '</h2>';
+
+                        $paragraph = $faq['paragraph'];
+                        foreach($paragraph as $p){
+                            echo $p ;
+                        }
+                        echo '</div>';
+                    };
+                ?>
+            </div>
+        </div>
+    </main>
+
 </body>
 </html>
